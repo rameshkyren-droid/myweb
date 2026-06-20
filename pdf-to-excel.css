@@ -1,0 +1,49 @@
+
+/* PDF to Excel OCR Tool - isolated styling */
+.pdf-excel-body .pdf-excel-main { padding: 2rem 0 4rem; }
+.pdf-excel-shell { display: grid; grid-template-columns: minmax(280px, 420px) minmax(0, 1fr); gap: 1.2rem; align-items: start; }
+.pdf-excel-panel, .pdf-excel-preview, .pdf-excel-article { border: 1px solid rgba(148,163,184,.24); border-radius: 1.4rem; background: color-mix(in srgb, var(--surface, #fff) 84%, transparent); box-shadow: 0 18px 45px rgba(15,23,42,.08); }
+.pdf-excel-panel { padding: 1.15rem; position: sticky; top: 5.5rem; }
+.pdf-excel-preview { padding: 1.15rem; min-height: 520px; overflow: hidden; }
+.pdf-excel-title { padding: 2.5rem 0 1.2rem; display: grid; grid-template-columns: minmax(0,1fr) minmax(240px,360px); gap: 1rem; align-items: end; }
+.pdf-excel-title h1 { font-size: clamp(2.2rem, 5vw, 4.7rem); line-height: .95; letter-spacing: -.07em; margin: .2rem 0; }
+.pdf-excel-title p { color: var(--muted, #64748b); font-size: 1.02rem; max-width: 820px; }
+.pdf-excel-badge-row, .pdf-excel-actions, .pdf-excel-option-grid { display:flex; flex-wrap:wrap; gap:.55rem; align-items:center; }
+.pdf-excel-badge { border:1px solid rgba(148,163,184,.28); background:rgba(148,163,184,.12); border-radius:999px; padding:.44rem .7rem; font-weight:800; font-size:.84rem; }
+.pdf-excel-field { margin: .9rem 0; }
+.pdf-excel-field label, .pdf-excel-label { display:block; font-weight:900; margin-bottom:.38rem; color: var(--text,#111827); }
+.pdf-excel-field input[type="file"], .pdf-excel-field input[type="text"], .pdf-excel-field input[type="number"], .pdf-excel-field select, .pdf-excel-field textarea { width:100%; border:1px solid rgba(148,163,184,.35); background:rgba(255,255,255,.72); color:inherit; border-radius:.9rem; padding:.78rem .85rem; font:inherit; }
+[data-theme="dark"] .pdf-excel-field input[type="file"], [data-theme="dark"] .pdf-excel-field input[type="text"], [data-theme="dark"] .pdf-excel-field input[type="number"], [data-theme="dark"] .pdf-excel-field select, [data-theme="dark"] .pdf-excel-field textarea { background:rgba(15,23,42,.78); }
+.pdf-excel-help { color:var(--muted,#64748b); font-size:.9rem; line-height:1.45; }
+.pdf-excel-check { display:flex; gap:.45rem; align-items:flex-start; font-weight:750; color: var(--text,#111827); margin:.5rem 0; }
+.pdf-excel-check input { margin-top:.25rem; }
+.pdf-excel-actions { margin-top:1rem; }
+.pdf-excel-actions .btn { white-space: nowrap; }
+.pdf-excel-status { margin-top:1rem; padding:.85rem; border-radius:1rem; border:1px dashed rgba(148,163,184,.4); color:var(--muted,#64748b); background:rgba(148,163,184,.08); white-space:pre-line; }
+.pdf-excel-progress { height: .72rem; border-radius:999px; overflow:hidden; background:rgba(148,163,184,.18); margin-top:.75rem; }
+.pdf-excel-progress > span { display:block; height:100%; width:0%; background:linear-gradient(90deg,#7c3aed,#06b6d4,#22c55e); border-radius:inherit; transition:width .22s ease; }
+.pdf-excel-preview-head { display:flex; justify-content:space-between; gap:1rem; align-items:flex-start; margin-bottom:.85rem; }
+.pdf-excel-preview-head h2 { margin:0; }
+.pdf-excel-preview-tabs { display:flex; gap:.35rem; flex-wrap:wrap; }
+.pdf-excel-tab { border:1px solid rgba(148,163,184,.3); border-radius:999px; padding:.42rem .7rem; background:transparent; color:inherit; cursor:pointer; font-weight:850; }
+.pdf-excel-tab.active { background:var(--text,#111827); color:var(--bg,#fff); }
+.pdf-excel-table-wrap { overflow:auto; border:1px solid rgba(148,163,184,.25); border-radius:1rem; max-height: 620px; background:rgba(255,255,255,.45); }
+[data-theme="dark"] .pdf-excel-table-wrap { background:rgba(15,23,42,.35); }
+.pdf-excel-table { border-collapse: collapse; width: 100%; min-width: 760px; font-size:.92rem; }
+.pdf-excel-table th, .pdf-excel-table td { border:1px solid rgba(148,163,184,.24); padding:.55rem .62rem; vertical-align:top; min-width:120px; }
+.pdf-excel-table th { position:sticky; top:0; background:rgba(148,163,184,.18); text-align:left; font-size:.8rem; text-transform:uppercase; letter-spacing:.04em; z-index:1; }
+.pdf-excel-table td[contenteditable="true"] { background:rgba(255,255,255,.38); outline:none; }
+.pdf-excel-table td[contenteditable="true"]:focus { box-shadow: inset 0 0 0 2px #7c3aed; }
+.pdf-excel-empty { display:grid; place-items:center; min-height: 380px; border:1px dashed rgba(148,163,184,.35); border-radius:1rem; color:var(--muted,#64748b); text-align:center; padding:2rem; }
+.pdf-excel-stats { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:.65rem; margin:1rem 0; }
+.pdf-excel-stat { border:1px solid rgba(148,163,184,.24); border-radius:1rem; padding:.8rem; background:rgba(148,163,184,.08); }
+.pdf-excel-stat strong { display:block; font-size:1.35rem; color:var(--text,#111827); }
+.pdf-excel-article { margin: 1.4rem auto 0; padding: clamp(1rem,3vw,2rem); line-height:1.78; }
+.pdf-excel-article h2 { margin-top:1.7rem; }
+.pdf-excel-article table { width:100%; border-collapse:collapse; margin:1rem 0; overflow:hidden; border-radius:1rem; }
+.pdf-excel-article th, .pdf-excel-article td { border:1px solid rgba(148,163,184,.3); padding:.75rem; text-align:left; vertical-align:top; }
+.pdf-excel-warning { border-left:4px solid #f59e0b; background:rgba(245,158,11,.12); padding:.85rem 1rem; border-radius:.85rem; }
+.pdf-excel-card-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; margin:1rem 0; }
+.pdf-excel-mini-card { border:1px solid rgba(148,163,184,.24); border-radius:1rem; padding:1rem; background:rgba(148,163,184,.07); }
+@media (max-width: 980px){ .pdf-excel-title, .pdf-excel-shell { grid-template-columns:1fr; } .pdf-excel-panel { position:static; } .pdf-excel-stats { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width: 620px){ .pdf-excel-main { padding-top:1rem; } .pdf-excel-title h1 { font-size:2.5rem; } .pdf-excel-card-grid, .pdf-excel-stats { grid-template-columns:1fr; } .pdf-excel-preview-head { display:block; } .pdf-excel-table { min-width:620px; } }
