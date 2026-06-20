@@ -1,0 +1,181 @@
+
+/* =========================================================
+   Uti-Mate PDF Pro + Tool Pack pages
+   Isolated page styles. Does not change existing utility-shell.
+   ========================================================= */
+.pdf-tool-main,
+.pack-page-main {
+  padding: clamp(34px, 6vw, 72px) 0 64px;
+}
+.pdf-hero,
+.pack-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr);
+  gap: clamp(20px, 4vw, 44px);
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+.pdf-hero-card,
+.pdf-drop-card,
+.pack-hero-card,
+.pack-side-card,
+.pdf-tool-card,
+.pdf-result-card,
+.pdf-article,
+.pack-grid-card {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: color-mix(in srgb, var(--surface), transparent 3%);
+  box-shadow: var(--shadow);
+}
+.pdf-hero-card,
+.pack-hero-card {
+  padding: clamp(24px, 4vw, 44px);
+  overflow: hidden;
+  position: relative;
+}
+.pdf-hero-card::after,
+.pack-hero-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -80px -100px auto;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent), transparent 70%), transparent 68%);
+  pointer-events: none;
+}
+.pdf-kicker,
+.pack-kicker {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.pdf-hero h1,
+.pack-hero h1 {
+  max-width: 760px;
+  font-size: clamp(38px, 6vw, 74px);
+  line-height: .94;
+}
+.pdf-lead,
+.pack-lead {
+  color: var(--muted);
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.72;
+  max-width: 760px;
+}
+.pdf-chip-row,
+.pack-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 18px;
+}
+.pdf-chip,
+.pack-chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-2);
+  padding: 8px 11px;
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 13px;
+}
+.pdf-drop-card,
+.pack-side-card {
+  padding: 18px;
+  display: grid;
+  align-content: center;
+  gap: 14px;
+}
+.pdf-drop-zone {
+  min-height: 190px;
+  border: 1.5px dashed color-mix(in srgb, var(--accent), transparent 35%);
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--accent-soft), transparent 20%);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 22px;
+}
+.pdf-drop-zone strong { display:block; font-size: 19px; margin-bottom: 6px; }
+.pdf-drop-zone span { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.pdf-file-input { width: 100%; }
+.pdf-tool-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 410px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.pdf-tool-card,
+.pdf-result-card { padding: 18px; }
+.pdf-tool-card { position: sticky; top: 92px; }
+.pdf-section-title { font-size: 22px; margin-bottom: 12px; }
+.pdf-control-grid { display: grid; gap: 14px; }
+.pdf-field { display: grid; gap: 7px; color: var(--muted); font-size: 13px; font-weight: 800; }
+.pdf-field span { color: var(--muted); font-weight: 700; font-size: 12px; line-height: 1.4; }
+.pdf-input,
+.pdf-select,
+.pdf-textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  padding: 12px 13px;
+  outline: none;
+}
+.pdf-textarea { min-height: 100px; resize: vertical; }
+.pdf-input:focus,
+.pdf-select:focus,
+.pdf-textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.pdf-checkbox-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.pdf-check { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-weight: 800; }
+.pdf-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.pdf-progress { margin-top: 12px; display: none; }
+.pdf-progress.show { display: block; }
+.pdf-progress-bar { height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; border: 1px solid var(--line); }
+.pdf-progress-bar span { display:block; height: 100%; width: 0; background: var(--accent); transition: width .2s ease; }
+.pdf-status { margin-top: 8px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.pdf-output { display: grid; gap: 12px; }
+.pdf-output-empty { min-height: 300px; display: grid; place-items: center; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 22px; padding: 20px; }
+.pdf-output-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.pdf-preview-tile { border: 1px solid var(--line); border-radius: 16px; background: var(--surface-2); overflow: hidden; }
+.pdf-preview-tile img { display:block; width: 100%; height: auto; }
+.pdf-preview-tile span { display:block; padding: 9px 10px; font-size: 12px; color: var(--muted); font-weight: 800; }
+.pdf-file-list { display:grid; gap:8px; margin-top: 10px; }
+.pdf-file-row { display:flex; justify-content: space-between; gap: 10px; border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; background: var(--surface-2); color: var(--muted); font-size: 13px; }
+.pdf-download-card { display:grid; gap:10px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface-2); padding: 16px; }
+.pdf-download-card strong { font-size: 18px; }
+.pdf-download-card span { color: var(--muted); line-height: 1.5; }
+.pdf-warning { border: 1px solid color-mix(in srgb, #f59e0b, transparent 35%); background: color-mix(in srgb, #f59e0b, transparent 86%); color: var(--text); border-radius: 16px; padding: 12px; line-height: 1.5; font-size: 13px; }
+.pdf-article,
+.pack-article { margin-top: 24px; padding: clamp(22px, 4vw, 36px); line-height: 1.75; }
+.pdf-article h2,
+.pack-article h2 { margin-top: 0; }
+.pdf-article h3,
+.pack-article h3 { margin-top: 24px; }
+.pack-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+.pack-grid-card { padding: 18px; display: grid; gap: 10px; transition: transform .15s ease, border-color .15s ease; }
+.pack-grid-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+.pack-grid-card strong { font-size: 20px; }
+.pack-grid-card span { color: var(--muted); line-height: 1.55; }
+.tools-pack-menu { width: min(960px, calc(100vw - 32px)); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tools-pack-menu .pack-nav-link { display: grid; gap: 3px; padding: 11px 10px; border-radius: 14px; }
+.tools-pack-menu .pack-nav-link span { color: var(--text); font-weight: 900; }
+.tools-pack-menu .pack-nav-link small { color: var(--muted); line-height: 1.35; }
+@media (max-width: 900px) {
+  .pdf-hero,
+  .pack-hero,
+  .pdf-tool-layout { grid-template-columns: 1fr; }
+  .pdf-tool-card { position: static; }
+  .tools-pack-menu { width: 100%; grid-template-columns: 1fr; }
+}
